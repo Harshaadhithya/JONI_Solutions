@@ -1,0 +1,222 @@
+/* TABLE OF CONTENTS */
+/* ------------------
+1. General
+2. Navbar
+3. Banner
+4. Client
+5. About 
+6. Features
+7. Pricing 
+8. Testimonials
+9. Brands
+10. FAQs 
+11. Footer
+-------------------- */
+
+
+
+/* 1 General */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+:root{
+    /* Background Color */
+    --bg-black:#090b3c;
+    --bg-white:#fff;
+    --bg-light-white:#fcfcfc;
+    --bg-light-2:#f2f7fa;
+    --bg-dark-green:#0e9d80;
+    --bg-features-1:#fff6d6;
+    --bg-features-2:#ebdcf9;
+    --bg-features-3:#ddf5fc;
+    --bg-features-4:#dcf6e8;
+    --bg-features-5:#f8e4e1;
+    --bg-features-6:#fbffd4;
+
+    /* Text Color */
+    --text-black:#000;
+    --text-white:#fff;
+    --text-dark-gray:#4c535d; 
+    --text-light-2:#798089;
+    --text-light-3:#5e5e72;
+    --text-light-4:#A0A0A0;
+    --text-dark-green:#12c4a0;
+    --text-orange:#ff5d2a;
+    --text-yellow:#ffc100;
+
+    /* Fonts */
+    --primary-font: Quicksand;
+    --secondary-font: 'Poppins', sans-serif;
+    --normal-font-weight:400;
+    --bold-font-weight:700;
+}
+body{
+    font-family:var(--primary-font);
+    font-weight: var(--normal-font-weight);
+    background-color: var(--bg-white); 
+}
+
+.contact-btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color:#2B87B9;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-white) !important; 
+    padding: 11px 28px !important;
+    border-radius: 10px;
+    border: 2px solid #2B87B9;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 10%); 
+    transition: 0.7s;
+}
+
+.trnsprnt-btn{
+    color: var(--text-dark-gray) !important;
+    background-color: transparent; 
+    border: 2px solid var(--text-dark-gray);
+}
+
+.navbar_container .navbar{
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -ms-transition:all .2s linear;
+    -webkit-transition: all .2s linear;
+}
+
+.navbar_container .navbar-brand img{
+    max-width: 210px;
+    height: auto;
+}
+
+.navbar_container .menu-navbar-nav{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+.navbar_container .nav-item{
+    margin: 0 10px;
+}
+
+.navbar_container .nav-item .nav-link{
+    color: var(--text-dark-gray);
+    font-size: 1.125rem;
+    font-weight: 650;
+    line-height: 1;
+}
+
+.navbar_container .nav-item .nav-link.active{
+    /* color: var(--text-dark-green); */
+    color:#2B87B9;
+}
+
+.navbar-moved{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    height: 5rem;
+    background: var(--bg-white);
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(12,0,46,0.05);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(12,0,46,0.05);
+    box-shadow: 0px 4px 6px 0px rgba(12,0,46,0.05);
+}
+
+.navbar-moved .navbar-brand img{
+    max-width: 190px;
+    height: auto;
+    /* animation: navbar_logo_animation 0.1s ease-in-out; */
+}
+
+/* @keyframes navbar_logo_animation{
+    0%{
+        width: 210px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 190px;
+    }
+} */
+
+.navbar-moved .nav-item .nav-link{
+    font-size: 17px;
+}
+
+
+.banner_container{
+    display: flex;
+    width: 100%;
+    padding: 100px 0 100px;
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.ban-img{
+    width: 100%;
+    height: auto;
+}
+
+.banner_container .banner-subtitle{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: var(--text-light-3);
+}
+
+.banner_container .banner-title{
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    color: var(text-black);
+}
+
+.banner_container .banner-title span{
+    color: #2B87B9;
+}
+
+.banner_container .banner-title-text{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text-light-2);
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+.banner_container .contact-btn-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.banner_container .ban-img-section img{
+    width: 100%;
+    animation: shake 5s ease-in-out infinite;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
